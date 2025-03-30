@@ -1,0 +1,17 @@
+name: Say hello every minute
+
+on:
+  schedule:
+    - cron: "*/1 * * * *" # 毎分実行（UTC）
+  workflow_dispatch: # 手動実行も可能
+
+jobs:
+  run-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run hello.py
+        run: python hello.py
