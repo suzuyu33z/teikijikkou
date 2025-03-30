@@ -1,8 +1,8 @@
 name: Say hello every minute
 
 on:
-  schedule:
-    - cron: "*/1 * * * *" # 毎分実行（UTC）
+  #schedule:
+  #  - cron: "*/1 * * * *" # 毎分実行（UTC）
   workflow_dispatch: # 手動実行も可能
 
 jobs:
